@@ -1,0 +1,97 @@
+Course Title: AI in Cloud Computing
+Course Code: BCSE303L
+Department: CSE
+Total Duration: 45 hours
+Course Description: Learn AI in Cloud.
+
+Course Objectives:
+1. Understand the fundamental concepts of AI and its integration with cloud computing.
+2. Analyze the benefits and challenges of deploying AI applications in the cloud.
+3. Design and implement cloud-based AI solutions using popular frameworks and tools.
+4. Evaluate the performance and scalability of AI models in cloud environments.
+5. Explore ethical considerations and privacy issues in AI-driven cloud applications.
+
+Course Outcomes:
+CO1: Students will be able to explain the basics of AI and its integration with cloud computing.
+CO2: Students will be able to analyze the benefits and challenges of deploying AI applications in the cloud.
+CO3: Students will be able to design and implement cloud-based AI solutions using popular frameworks and tools.
+CO4: Students will be able to evaluate the performance and scalability of AI models in cloud environments.
+CO5: Students will be able to discuss ethical considerations and privacy issues in AI-driven cloud applications.
+
+Module-wise Syllabus:
+
+Module 1: Introduction
+- Basics of AI and cloud computing
+  - Definition and history of AI
+  - Types of AI (supervised, unsupervised, reinforcement learning)
+  - Key concepts in cloud computing (IaaS, PaaS, SaaS)
+  - Benefits and challenges of AI in cloud computing
+  - Overview of AI frameworks and tools (TensorFlow, PyTorch, AWS AI services)
+  - Real-world examples of AI in cloud applications (Google Cloud AI, Microsoft Azure AI)
+- Overview of the course structure and learning objectives
+
+Module 2: Cloud Infrastructure for AI
+- Cloud infrastructure basics
+  - Virtual machines and containerization
+  - Storage options (object storage, block storage)
+  - Networking and security in cloud environments
+  - Scalability and load balancing
+  - Case study: Netflix Microservices Architecture
+- Hands-on lab: Setting up a cloud environment for AI
+
+Module 3: AI Frameworks and Tools
+- Overview of AI frameworks and tools
+  - TensorFlow and PyTorch
+  - AWS AI services (SageMaker, Rekognition, Comprehend)
+  - Google Cloud AI (AutoML, AI Platform)
+  - Microsoft Azure AI (Cognitive Services, Machine Learning)
+- Hands-on lab: Building a simple AI model using TensorFlow
+
+Module 4: AI Model Deployment in Cloud
+- Model deployment strategies
+  - Model training and validation
+  - Model deployment in cloud environments
+  - Auto-scaling and load balancing
+  - Monitoring and logging
+  - Case study: Tesla Autopilot Computer Vision
+- Hands-on lab: Deploying a trained AI model in the cloud
+
+Module 5: Performance and Scalability of AI Models
+- Performance optimization techniques
+  - Model compression and quantization
+  - Model parallelism and distributed training
+  - Performance evaluation metrics
+  - Scalability considerations
+  - Case study: Amazon Alexa AI Performance
+- Hands-on lab: Optimizing and scaling an AI model
+
+Module 6: Ethical Considerations and Privacy in AI
+- Ethical considerations in AI
+  - Bias and fairness
+  - Transparency and explainability
+  - Privacy and data protection
+  - Case study: IBM Watson Health Privacy Issues
+- Privacy in cloud environments
+  - Data encryption and access control
+  - Compliance with data protection regulations (GDPR, HIPAA)
+  - Case study: Microsoft Azure Privacy and Security
+
+Case Studies:
+1. Netflix Microservices Architecture
+2. Tesla Autopilot Computer Vision
+3. Amazon Alexa AI Performance
+4. IBM Watson Health Privacy Issues
+
+Textbooks:
+1. "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurélien Géron
+2. "Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
+3. "Programming the Cloud: A Practical Guide to Building Cloud-Native Applications" by Mark Stiving
+
+Reference Books:
+1. "Artificial Intelligence: A Modern Approach" by Stuart Russell and Peter Norvig
+2. "Cloud Computing: Principles, Technologies, and Applications" by Rajkumar Buyya, Praveen Venugopal, and S. S. Yeo
+3. "Practical AI: Machine Learning and Big Data in the Real World" by Thomas H. Davenport and D.J. Patil
+
+Syllabus Benchmarking:
+- MIT: "Introduction to Machine Learning" (6.036J/18.410J)
+- Stanford: "Machine Learning" (CS229)

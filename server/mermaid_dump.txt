@@ -1,0 +1,312 @@
+```mermaid
+flowchart TD
+    A["Data (Input)"] --> B[Data Collection]
+    B --> C[Data Preprocessing]
+    C --> D[Feature Engineering]
+    D --> E[Model Training]
+    E --> F[Model Evaluation]
+    F --> G[Model Deployment]
+    G --> H[Real-Time Prediction]
+    H --> I[Monitoring]
+```
+
+---NEXT---
+
+```mermaid
+  flowchart TD
+    A["Data (Input)"] --> B[Data Preprocessing]
+    B --> C[Feature Selection]
+    C --> D[Model Training]
+    D --> E[Model Evaluation]
+    E --> F[Model Deployment]
+  ```
+
+---NEXT---
+
+```mermaid
+  graph LR
+    A[Root Node] -->|Feature 1| B[Node 1]
+    A -->|Feature 2| C[Node 2]
+    B -->|Feature 3| D[Leaf Node 1]
+    B -->|Feature 4| E[Leaf Node 2]
+    C -->|Feature 5| F[Leaf Node 3]
+    C -->|Feature 6| G[Leaf Node 4]
+  ```
+
+---NEXT---
+
+```mermaid
+  graph TD
+    A[Support Vectors] --> B[Decision Boundary]
+    B --> C[Class 1]
+    B --> D[Class 2]
+  ```
+
+---NEXT---
+
+```mermaid
+  graph LR
+    A[Root Node] -->|Feature 1| B[Node 1]
+    A -->|Feature 2| C[Node 2]
+    B -->|Feature 3| D[Leaf Node 1]
+    B -->|Feature 4| E[Leaf Node 2]
+    C -->|Feature 5| F[Leaf Node 3]
+    C -->|Feature 6| G[Leaf Node 4]
+  ```
+
+---NEXT---
+
+```mermaid
+  flowchart TD
+    A[Initial Model] --> B[Model 1]
+    B --> C[Model 2]
+    C --> D[Model 3]
+    D --> E[Model 4]
+    E --> F[Final Model]
+  ```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["State (s)"] --> B["Action (a)"]
+    B --> C["Next State (s')"]
+    C --> D["Reward (r)"]
+    D --> A
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Q(s, a)"] --> B["= Q(s, a) + α * (r + γ * max_a' Q(s', a') - Q(s, a))"]
+    A --> C["Current Q-value"]
+    B --> D["Updated Q-value"]
+    C --> E["r + γ * max_a' Q(s', a')"]
+    E --> F["Discounted future reward"]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["State Input"] --> B["Hidden Layer 1"]
+    B --> C["Hidden Layer 2"]
+    C --> D["Output Layer"]
+    D --> E["Action-Value (Q(s, a))"]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Experience Replay"] --> B["Replay Buffer"]
+    B --> C["Sample Mini-batch"]
+    C --> D["Update Neural Network"]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Input (x1, x2)"] --> B["Weighted Sum (z)"]
+    B --> C["Activation (y)"]
+    C --> D["Target (t)"]
+    D --> E["Error (e)"]
+    E --> F["Update Weights (w)"]
+    F --> G["Bias (b)"]
+    G --> H["Next Iteration"]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Input (x)"] --> B["Weighted Sum (z)"]
+    B --> C["Activation (a)"]
+    C --> D["Output (y)"]
+    D --> E["Target (t)"]
+    E --> F["Error (e)"]
+    F --> G["Gradient (dL/dz)"]
+    G --> H["Update Weights (w)"]
+    H --> I["Bias (b)"]
+    I --> J["Next Iteration"]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Input (x)"] --> B["Filter (w)"]
+    B --> C["Convolution (z)"]
+    C --> D["Activation (a)"]
+    D --> E["Feature Map
+
+---
+
+## Module 6: Model Evaluation and Selection
+
+### **6.1 Cross-validation**
+
+Cross-validation is a fundamental technique used to assess the performance of machine learning models and to prevent overfitting. It involves partitioning the dataset into a number of folds, training the model on a subset of the data, and validating it on the remaining data. This process is repeated multiple times to ensure a robust evaluation of the model's performance.
+
+#### **6.1.1 K-fold Cross-validation**
+
+K-fold cross-validation is one of the most common methods for cross-validation. It involves dividing the dataset into \( k \) equal-sized folds. The model is trained on \( k-1 \) folds and validated on the remaining fold. This process is repeated \( k \) times, with each fold serving as the validation set once. The performance metric (e.g., accuracy, F1 score) is averaged over all \( k \) iterations to provide a more reliable estimate of the model's performance.
+
+**Example:**
+Suppose we have a dataset with 1000 samples and we choose \( k = 5 \). The dataset is divided into 5 folds, each containing 200 samples. The model is trained on 400 samples and validated on 200 samples. This process is repeated 5 times, with each fold serving as the validation set once. The average performance across the 5 folds is then calculated.
+
+**Mathematical Formulation:**
+Let \( D \) be the dataset, and let \( D_i \) be the \( i \)-th fold. The performance metric \( M \) is calculated as:
+\[ M_{\text{avg}} = \frac{1}{k} \sum_{i=1}^{k} M_i \]
+where \( M_i \) is the performance metric obtained when the model is trained on \( D_1, D_2, \ldots, D_{i-1}, D_{i+1}, \ldots, D_k \) and validated on \( D_i \).
+
+**Mermaid Diagram:**
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Data (Input)"] --> B[Split into k folds]
+    B --> C1[Train on k-1 folds]
+    C1 --> D1[Validate on 1 fold]
+    D1 --> E1[Calculate performance metric]
+    C1 --> C2[Train on k-1 folds]
+    C2 --> D2[Validate on 1 fold]
+    D2 --> E2[Calculate performance metric]
+    C2 --> C3[Train on k-1 folds]
+    C3 --> D3[Validate on 1 fold]
+    D3 --> E3[Calculate performance metric]
+    C3 --> C4[Train on k-1 folds]
+    C4 --> D4[Validate on 1 fold]
+    D4 --> E4[Calculate performance metric]
+    C4 --> C5[Train on k-1 folds]
+    C5 --> D5[Validate on 1 fold]
+    D5 --> E5[Calculate performance metric]
+    E1 --> F["Average performance"]
+    E2 --> F
+    E3 --> F
+    E4 --> F
+    E5 --> F
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Define hyperparameter grid"] --> B[Train model with H1]
+    B --> C1[Validate model with H1]
+    C1 --> D1[Calculate performance metric]
+    B --> B[Train model with H2]
+    B --> C2[Validate model with H2]
+    C2 --> D2[Calculate performance metric]
+    B --> B[Train model with H3]
+    B --> C3[Validate model with H3]
+    C3 --> D3[Calculate performance metric]
+    D1 --> E1["Select optimal hyperparameters"]
+    D2 --> E1
+    D3 --> E1
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Define hyperparameter distribution"] --> B[Sample 100 hyperparameters]
+    B --> C1[Train model with H1]
+    C1 --> D1[Validate model with H1]
+    C1 --> E1[Calculate performance metric]
+    B --> C2[Train model with H2]
+    C2 --> D2[Validate model with H2]
+    C2 --> E2[Calculate performance metric]
+    B --> C3[Train model with H3]
+    C3 --> D3[Validate model with H3]
+    C3 --> E3[Calculate performance metric]
+    E1 --> F["Select optimal hyperparameters"]
+    E2 --> F
+    E3 --> F
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Model A"] --> B[5 parameters]
+    B --> C[Likelihood function: 100]
+    C --> D[AIC: 10 - 13.8155 = -3.8155]
+    C --> E[BIC: 34.6574 - 13.8155 = 20.8419]
+    A --> F["Model B"]
+    F --> G[10 parameters]
+    G --> H[Likelihood function: 150]
+    H --> I[AIC: 20 - 18.2322 = 1.7678]
+    H --> J[BIC: 69.3148 - 18.2322 = 51.0826]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["True Positives: 80"] --> B[False Positives: 10]
+    B --> C[False Negatives: 10]
+    C --> D[True Negatives: 810]
+    D --> E["Precision: 80 / (80 + 10) = 0.8889"]
+    D --> F["Recall: 80 / (80 + 10) = 0.8889"]
+    E --> G["F1: 2 * (0.8889 * 0.8889) / (0.8889 + 0.8889) = 0.8889"]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Base Model A"] --> B[Train on training data]
+    B --> C[Predictions]
+    A --> D["Base Model B"]
+    D --> E[Predictions]
+    A --> F["Base Model C"]
+    F --> G[Predictions]
+    C --> H[Train meta-model]
+    E --> H
+    G --> H
+    H --> I[Make predictions on test data]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Base Model A"] --> B[Define hyperparameters]
+    B --> C[Optimize hyperparameters]
+    A --> D["Base Model B"]
+    D --> E[Define hyperparameters]
+    D --> F[Optimize hyperparameters]
+    A --> G["Base Model C"]
+    G --> H[Define hyperparameters]
+    G --> I[Optimize hyperparameters]
+    A --> J["Meta-model"]
+    J --> K[Define hyperparameters]
+    J --> L[Optimize hyperparameters]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A["Data (Input)"] --> B[Handling Missing Values]
+    B --> C[Encoding Categorical Variables]
+    C --> D[Feature Scaling and Normalization]
+    D --> E[Feature Selection]
+    E --> F[Model Training]
+    F --> G[Model Evaluation]
+```
+
+---NEXT---
+
+```mermaid
+graph TD
+    A[Model Training] --> B[Save Model]
+    B --> C[Load Model]
+    C --> D[API Integration]
+    D --> E[Real-Time Predictions]
+```
