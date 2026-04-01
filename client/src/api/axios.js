@@ -1,7 +1,17 @@
 import axios from 'axios';
 
+// Safely construct the API base URL without duplicating /api or slashes
+let baseValue = import.meta.env.VITE_API_URL || '';
+// Strip trailing slashes
+baseValue = baseValue.replace(/\/+$/, '');
+// Strip /api if the user accidentally included it in their Vercel environment variable
+if (baseValue.endsWith('/api')) {
+    baseValue = baseValue.slice(0, -4);
+}
+const apiUrl = baseValue ? `${baseValue}/api` : '/api';
+
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : '/api',
+    baseURL: apiUrl,
     headers: {
         'Content-Type': 'application/json'
     },
